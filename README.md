@@ -1,2 +1,8 @@
-# Profundizacion1_Laravel
-Construyendo un sistema de información usando Laravel para un proyecto de clase. Este repositorio muestra la integración de funciones clave como administración de bases de datos, autenticación y administración de usuarios, lo que demuestra las capacidades de Laravel en el desarrollo de aplicaciones web.
+
+# Sistema de Información - Proyecto de Profundización
+
+Este proyecto, desarrollado como parte de la clase de profundización, utiliza Laravel para construir un sistema de información que incluye gestión de usuarios, autenticación y manejo de bases de datos.
+
+
+# Contribuciones
+Si deseas contribuir a este proyecto, por favor abre un pull request o crea un issue para discutir los cambios que propones.
