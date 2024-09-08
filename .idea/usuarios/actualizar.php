@@ -18,4 +18,5 @@ if ($result) {
     echo "<script> alert('No se pudo registrar el usuario'); location.href='tabla.php'; </script>";
 
 }
+mysqli_close($link);
 ?>

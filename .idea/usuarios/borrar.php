@@ -11,5 +11,6 @@ if ($result) {
     echo "<script> alert('No se pudo borrar el usuario'); location.href='tabla.php'; </script>";
 
 }
+mysqli_close($link);
 ?>
 
