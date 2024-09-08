@@ -48,7 +48,8 @@ include 'conexiones.php';
                 </thead>
                 <tbody>
                 <?php
-                // Muestra los resultados en la tabla
+
+
                 while ($row = mysqli_fetch_array($result)) {
                     echo "<tr>
                         <th>{$row['ID']}</th>
