@@ -16,13 +16,6 @@
         <h3 class="fw-bold text-center text-uppercase p-2 rounded mb-3">Crear Nuevo Usuario</h3>
         <form action="nuevo_exito.php" method="post" enctype="multipart/form-data" >
             <div class="mb-3">
-                <label for="id" class="form-label">ID</label>
-                <div class="input-group">
-                    <span class="input-group-text"><i class="bi bi-hash"></i></span>
-                    <input type="text" class="form-control rounded-3 shadow-sm" id="id"  name="id" placeholder="Ingresa el ID" required>
-                </div>
-            </div>
-            <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-person"></i></span>

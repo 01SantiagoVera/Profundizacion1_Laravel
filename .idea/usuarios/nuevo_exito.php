@@ -7,17 +7,16 @@ if (!$link) {
 }
 
 // Obtener los datos del formulario
-$id = $_POST['id'] ?? 'Valor por defecto';
-$Nombre = $_POST['nombre'] ?? '';
-$Apellido = $_POST['apellido'] ?? '';
-$email = $_POST['email'] ?? '';
-$telefono = $_POST['telefono'] ?? '';
-$genero = $_POST['genero'] ?? 'Valor por defecto';
-$ciudad = $_POST['Ciudad'] ?? 'Valor por defecto';
+$Nombre = $_POST['nombre'] ;
+$Apellido = $_POST['apellido'] ;
+$email = $_POST['email'] ;
+$telefono = $_POST['telefono'] ;
+$genero = $_POST['genero'] ;
+$ciudad = $_POST['ciudad'] ;
 
 
-$query = "INSERT INTO usuario (ID, Nombre, ApellidoS, email, telefono, genero, ciudad) 
-          VALUES ('$id', '$Nombre', '$Apellido', '$email', '$telefono', '$genero', '$ciudad')";
+$query = "INSERT INTO usuario (Nombre, ApellidoS, email, telefono, genero, ciudad) 
+          VALUES ( '$Nombre', '$Apellido', '$email', '$telefono', '$genero', '$ciudad')";
 
 // Ejecutar la consulta
 $result = mysqli_query($link, $query);
@@ -28,6 +27,5 @@ if ($result) {
     echo "<script> alert('No se pudo registrar el usuario'); location.href='tabla.php'; </script>";
 }
 
-asd
 mysqli_close($link);
 ?>
