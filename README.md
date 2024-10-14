@@ -103,6 +103,4 @@ El proyecto se está desarrollando localmente utilizando **Laragon** como entorn
 ### Contribuciones
 Si deseas contribuir a este proyecto, puedes hacer un fork y enviar un pull request. Todos los comentarios y sugerencias son bienvenidos.
 
-### Licencia
-Este proyecto está bajo la Licencia MIT.
 
