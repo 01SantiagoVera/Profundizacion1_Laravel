@@ -2,55 +2,59 @@
 
 @section('title', 'Nueva empresa')
 @section('content')
-<body>
-<div class="container mt-5 bg-light p-4">
-    <div class="card p-4 shadow-sm mb-4">
-        <h3 class="fw-bold text-center text-uppercase p-2 rounded mb-3">Registrar Nueva Empresa</h3>
+<div class="col py-3">
+    <div class="container mt-5 bg-light p-4 rounded-3">
+        <div class="card p-4 shadow-sm mb-4 bg-dark">
+        <h3 class="fw-bold text-center text-uppercase text-white p-2 mb-3">Registrar Nueva Empresa</h3>
         <form action="{{route('empresa.store')}}" method="post" enctype="multipart/form-data" >
             @csrf
             <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
+                <label for="nombre" class="form-label text-white">Nombre</label>
                 <div class="input-group">
-                    <span class="input-group-text"><i class="bi bi-person"></i></span>
-                    <input type="text" class="form-control rounded-3 shadow-sm" id="nombre" name="nombre" placeholder="Ingresa el nombre" required>
+                    <span class="input-group-text bg-dark text-white"><i class="bi bi-person"></i></span>
+                    <input type="text" class="form-control bg-dark text-white border-light rounded" id="nombre" name="nombre" placeholder="Ingresa el nombre" required>
                 </div>
             </div>
             <div class="mb-3">
-                <label for="nit" class="form-label">Nit</label>
+                <label for="nit" class="form-label text-white">Nit</label>
                 <div class="input-group">
-                    <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
-                    <input type="text" class="form-control rounded-3 shadow-sm" id="nit" name="nit" placeholder="Ingresa el nit" required>
+                    <span class="input-group-text bg-dark text-white"><i class="bi bi-person-badge"></i></span>
+                    <input type="text" class="form-control bg-dark text-white border-light rounded" id="nit" name="nit" placeholder="Ingresa el nit" required>
                 </div>
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
+                <label for="email" class="form-label text-white">Email</label>
                 <div class="input-group">
-                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                    <input type="email" class="form-control rounded-3 shadow-sm" id="email" name="email" placeholder="Ingresa el email" required>
+                    <span class="input-group-text bg-dark text-white"><i class="bi bi-envelope"></i></span>
+                    <input type="email" class="form-control bg-dark text-white border-light rounded" id="email" name="email" placeholder="Ingresa el email" required>
                 </div>
             </div>
             <div class="mb-3">
-                <label for="direccion" class="form-label">Dirección</label>
+                <label for="direccion" class="form-label text-white">Dirección</label>
                 <div class="input-group">
-                    <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
-                    <input type="text" class="form-control rounded-3 shadow-sm" id="direccion" name="direccion" placeholder="Ingrese su Direccion" required>
+                    <span class="input-group-text bg-dark text-white"><i class="bi bi-geo-alt"></i></span>
+                    <input type="text" class="form-control bg-dark text-white border-light rounded" id="direccion" name="direccion" placeholder="Ingrese su Direccion" required>
                 </div>
             </div>
             <div class="mb-3">
-                <label for="telefono" class="form-label">Teléfono</label>
+                <label for="telefono" class="form-label text-white">Teléfono</label>
                 <div class="input-group">
-                    <span class="input-group-text"><i class="bi bi-telephone"></i></span>
-                    <input type="tel" class="form-control rounded-3 shadow-sm" id="telefono" name="telefono" placeholder="Ingresa el teléfono" required>
+                    <span class="input-group-text bg-dark text-white"><i class="bi bi-telephone"></i></span>
+                    <input type="tel" class="form-control bg-dark text-white border-light rounded" id="telefono" name="telefono" placeholder="Ingresa el teléfono" required>
                 </div>
             </div>
 
-            <div class="d-flex justify-content-between">
-                <button type="submit" class="btn btn-primary btn-lg rounded-pill" aria-label="Guardar">Guardar</button>
-                <a href="{{ route('empresa.index') }}" class="btn btn-secondary btn-lg rounded-pill" aria-label="Cancelar">Cancelar</a>
+            <div class="d-flex justify-content-start">
+                <button type="submit" class="btn btn-outline-success btn-lg shadow-sm me-2">
+                    <i class="bi bi-save"></i> Guardar
+                </button>
+                <a href="{{ route('empresa.index') }}" class="btn btn-outline-danger btn-lg shadow-sm">
+                    <i class="bi bi-x-lg"></i> Cancelar
+                </a>
             </div>
         </form>
     </div>
 </div>
-</body>
+</div>
 @endsection
 

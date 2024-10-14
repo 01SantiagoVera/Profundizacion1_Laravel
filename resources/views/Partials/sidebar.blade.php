@@ -11,10 +11,22 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('empresa.index') }}" class="nav-link px-0 align-middle text-white">
+                <a href="{{ route('Estudiante.index') }}" class="nav-link px-0 align-middle text-white">
                     <i class="fs-4 bi-backpack text-white"></i>
                     <span class="ms-1 d-none d-sm-inline text-white">Estudiantes</span>
                 </a>
+            </li>
+            <li>
+                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-white">
+                    <i class="fs-4 bi-person-workspace text-white"></i> <span class="ms-1 d-none d-sm-inline">Tutores</span> </a>
+                <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                    <li class="w-100">
+                        <a href="{{route('TutorAcademico.index')}}" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline text-white">Tutor </span> Academico </a>
+                    </li>
+                    <li>
+                        <a href="{{route('TutorEmpresarial.index')}}" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline text-white">Tutor </span> Empresarial </a>
+                    </li>
+                </ul>
             </li>
         </ul>
         <hr>
