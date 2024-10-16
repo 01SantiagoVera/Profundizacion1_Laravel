@@ -39,7 +39,7 @@ Actualmente, la gestión de prácticas empresariales en la UDES se realiza manua
 El proyecto está basado en el framework PHP **Laravel**. Se están utilizando las siguientes tecnologías:
 
 - **Backend**: Laravel
-- **Frontend**: Blade con Livewire
+- **Frontend**: Blade 
 - **Base de Datos**: MySQL
 - **Agrupación de Activos**: Vite
 
@@ -103,6 +103,4 @@ El proyecto se está desarrollando localmente utilizando **Laragon** como entorn
 ### Contribuciones
 Si deseas contribuir a este proyecto, puedes hacer un fork y enviar un pull request. Todos los comentarios y sugerencias son bienvenidos.
 
-### Licencia
-Este proyecto está bajo la Licencia MIT.
 
