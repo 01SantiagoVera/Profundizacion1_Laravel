@@ -10,8 +10,7 @@
 @section('title', 'Lista de Estudiantes')
 
 @section('content')
-    <div class="col py-3">
-        <div class="container mt-5">
+
             <div class="row mb-4">
                 <div class="col-12 col-md-6">
                     <h3 class="fw-bold text-uppercase mb-0" style="color: #393939;">Estudiantes</h3>
@@ -53,7 +52,7 @@
                                 <form action="{{ route('Estudiante.destroy', $estudiante->id) }}" method="POST" style="display: inline;">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-sm btn-outline-danger" title="Borrar" onclick="return confirm('¿Estás seguro de que quieres borrar esta empresa?');">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" title="Borrar" onclick="return confirm('¿Estás seguro de que quieres borrar esta estudiante?');">
                                         <i class="bi bi-trash"></i>
                                     </button>
                                 </form>
@@ -63,6 +62,5 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
+
 @endsection

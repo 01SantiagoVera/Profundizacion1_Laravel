@@ -4,25 +4,38 @@
 
 @section('content')
     <div class="col py-3">
-        <div class="container mt-5 bg-light p-4 rounded-3">
+        <div class="container mt-5 bg-light p-4 rounded-3" style="max-width: 600px;">
             <div class="card p-4 shadow-sm mb-4 bg-dark">
                 <h4 class="fw-bold text-center text-uppercase text-white p-2 mb-3">{{$empresa->nombre}}</h4>
 
-                <p class="text-white"><b>ID:</b> {{$empresa->id}}  <b>NIT:</b> {{$empresa->nit}}</p>
+                <div class="row text-white">
+                    <!-- Primera columna -->
+                    <div class="col-md-6 mb-3">
+                        <i class="bi bi-card-text me-2"></i>
+                        <b>ID:</b> {{$empresa->id}}
+                    </div>
 
-                <div class="info-item mb-3 text-white">
-                    <i class="bi bi-geo-alt"></i>
-                    <span>{{$empresa->direccion}}</span>
+                    <div class="col-md-6 mb-3">
+                        <i class="bi bi-credit-card me-2"></i>
+                        <b>NIT:</b> {{$empresa->nit}}
+                    </div>
+
+                    <!-- Segunda columna -->
+                    <div class="col-md-6 mb-3">
+                        <i class="bi bi-geo-alt me-2"></i>
+                        <b>Dirección:</b> {{$empresa->direccion}}
+                    </div>
+
+
+
+                    <div class="col-md-6 mb-3">
+                        <i class="bi bi-telephone me-2"></i>
+                        <b>Teléfono:</b> {{$empresa->telefono}}
+                    </div>
                 </div>
-
                 <div class="info-item mb-3 text-white">
-                    <i class="bi bi-envelope"></i>
-                    <span>{{$empresa->email}}</span>
-                </div>
-
-                <div class="info-item mb-3 text-white">
-                    <i class="bi bi-telephone"></i>
-                    <span>{{$empresa->telefono}}</span>
+                    <i class="bi bi-envelope me-2"></i>
+                    <b>Email:</b> {{$empresa->email}}
                 </div>
             </div>
 

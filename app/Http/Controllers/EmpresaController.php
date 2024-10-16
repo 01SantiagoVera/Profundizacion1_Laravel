@@ -23,9 +23,9 @@ class EmpresaController extends Controller
         return view('empresas.edit', compact('empresa'));
     }
     public function destroy($id) {
-        $empresa = Empresa::findOrFail($id); // Busca la empresa
+        $empresa = Empresa::findOrFail($id);
         $empresa->delete(); // Elimina la empresa
-        return redirect()->route('empresa.index')->with('mensaje', 'Empresa eliminada'); // Redirige con un mensaje
+        return redirect()->route('empresa.index')->with('mensaje', 'Empresa eliminada');
     }
 
 

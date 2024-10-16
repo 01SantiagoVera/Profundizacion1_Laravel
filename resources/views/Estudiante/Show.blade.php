@@ -4,27 +4,32 @@
 
 @section('content')
     <div class="col py-3">
-        <div class="container mt-5 bg-light p-4 rounded-3">
+        <div class="container mt-5 bg-light p-4 rounded-3" style="max-width: 600px;">
             <div class="card p-4 shadow-sm mb-4 bg-dark">
                 <h4 class="fw-bold text-center text-uppercase text-white p-2 mb-3">
                     {{$estudiante->nombre}} {{$estudiante->apellido}}
                 </h4>
+                <div class="row text-white">
+                    <!-- Primera columna -->
+                    <div class="col-md-6 mb-3">
+                        <i class="bi bi-card-text me-2"></i>
+                        <b>ID:</b> {{$estudiante->id}}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <i class="bi bi-telephone me-2"></i>
+                        <b>Telefono:</b> {{$estudiante->telefono}}
+                    </div>
 
-
-                <p class="text-white"><b>ID:</b> {{$estudiante->id}}
-
-                <div class="info-item mb-3 text-white">
-                    <i class="bi bi-envelope"></i>
-                    <span>{{$estudiante->email}}</span>
-                </div>
-
-                <div class="info-item mb-3 text-white">
-                    <i class="bi bi-telephone"></i>
-                    <span>{{$estudiante->telefono}}</span>
                 </div>
                 <div class="info-item mb-3 text-white">
                     <i class="bi bi-columns-gap"></i>
+                    <b>Habilidades:</b>
                     <span>{{$estudiante->habilidades}}</span>
+                </div>
+                <div class="info-item mb-3 text-white">
+                    <i class="bi bi-envelope"></i>
+                    <b>Email:</b>
+                    <span>{{$estudiante->email}}</span>
                 </div>
             </div>
 

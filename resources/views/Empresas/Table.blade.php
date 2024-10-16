@@ -10,8 +10,6 @@
 @section('title', 'Lista de Empresas')
 
 @section('content')
-    <div class="col py-3">
-        <div class="container mt-5">
             <div class="row mb-4">
                 <div class="col-12 col-md-6">
                     <h3 class="fw-bold text-uppercase mb-0" style="color: #393939;">Empresas</h3>
@@ -63,6 +61,5 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
+
 @endsection

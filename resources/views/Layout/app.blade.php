@@ -13,19 +13,20 @@
 
 </head>
 <body>
+
 <div class="container-fluid">
-    <div class="row flex-nowrap">
-@include('Partials.sidebar')
-
-    @yield('content')
-
+    <div class="row">
+        @include('Partials.sidebar')
+        <div class="col-md-9 col-lg-10 p-0">
+            <div class="container mt-5">
+                @yield('content')
+            </div>
+        </div>
     </div>
 </div>
 
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-@yield('scripts') <!-- Si necesitas agregar scripts específicos para algunas vistas -->
+@yield('scripts')
 <script>
     setTimeout(function() {
         var alertElement = document.getElementById('alert');
@@ -33,15 +34,12 @@
             alertElement.classList.remove('show');
             alertElement.classList.add('fade');
 
-            // Esperar a que termine la transición antes de ocultar
             setTimeout(function() {
                 alertElement.style.display = 'none';
-            }, 150); // Asegúrate de que este tiempo coincide con la duración de la transición
+            }, 150);
         }
     }, 3000);
 </script>
-<script>
-    feather.replace();  // Esto es para activar los íconos de Feather
-</script>
+
 </body>
 </html>
