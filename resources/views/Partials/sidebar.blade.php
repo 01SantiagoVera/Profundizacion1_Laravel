@@ -5,7 +5,7 @@
         </a>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
             <li>
-                <a href="{{ route('empresa.index') }}" class="nav-link px-0 align-middle text-white">
+                <a href="{{ route('Empresa.index') }}" class="nav-link px-0 align-middle text-white">
                     <i class="fs-4 bi-people text-white"></i>
                     <span class="ms-1 d-none d-sm-inline text-white">Empresas</span>
                 </a>
@@ -18,15 +18,26 @@
             </li>
             <li>
                 <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-white">
-                    <i class="fs-4 bi-person-workspace text-white"></i> <span class="ms-1 d-none d-sm-inline">Tutores</span> </a>
-                <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                    <i class="fs-4 bi-person-workspace text-white"></i> <span class="ms-1 d-none d-sm-inline">Tutores</span>
+                </a>
+                <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                     <li class="w-100">
-                        <a href="{{route('TutorAcademico.index')}}" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline text-white">Tutor </span> Academico </a>
+                        <a href="{{route('TutorAcademico.index')}}" class="nav-link px-0 text-white">
+                            <span class="d-none d-sm-inline text-white">Tutor</span> Académico
+                        </a>
                     </li>
                     <li>
-                        <a href="{{route('TutorEmpresarial.index')}}" class="nav-link px-0 text-white"> <span class="d-none d-sm-inline text-white">Tutor </span> Empresarial </a>
+                        <a href="{{route('TutorEmpresarial.index')}}" class="nav-link px-0 text-white">
+                            <span class="d-none d-sm-inline text-white">Tutor</span> Empresarial
+                        </a>
                     </li>
                 </ul>
+            </li>
+            <li>
+                <a href="{{ route('Oferta.index') }}" class="nav-link px-0 align-middle text-white">
+                    <i class="fs-4 bi-megaphone text-white"></i>
+                    <span class="ms-1 d-none d-sm-inline text-white">Ofertas</span>
+                </a>
             </li>
         </ul>
         <hr>
@@ -38,9 +49,7 @@
             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
                 <li><a class="dropdown-item" href="#">Configuración</a></li>
                 <li><a class="dropdown-item" href="#">Perfil</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
+                <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Salir</a></li>
             </ul>
         </div>

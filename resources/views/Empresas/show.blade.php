@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('Layout.app')
 
 @section('title', $empresa->nombre)
 
@@ -25,7 +25,6 @@
                         <i class="bi bi-geo-alt me-2"></i>
                         <b>Dirección:</b> {{$empresa->direccion}}
                     </div>
-
 
 
                     <div class="col-md-6 mb-3">

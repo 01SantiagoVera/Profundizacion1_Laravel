@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('requisitos');
             $table->bigInteger('duracion');
             $table->bigInteger('remuneracion');
-            $table->dateTime('fecha_inico');
+            $table->dateTime('fecha_inicio');
             $table->dateTime('fecha_fin');
             $table->longText('habilidades');
         });

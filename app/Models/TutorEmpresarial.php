@@ -24,9 +24,9 @@ class TutorEmpresarial extends Model
     ];
 
     public function empresa()
-    {
-        return $this->belongsTo(Empresa::class, 'id_empresa');
-    }
+{
+    return $this->belongsTo(Empresa::class, 'id_empresa');
+}
 
     public $timestamps = false;
 
