@@ -20,12 +20,12 @@ class EmpresaController extends Controller
     public function edit($id)
     {
         $empresa = Empresa::findOrFail($id);
-        return view('empresas.edit', compact('empresa'));
+        return view('Empresas.edit', compact('empresa'));
     }
     public function destroy($id) {
         $empresa = Empresa::findOrFail($id);
         $empresa->delete(); // Elimina la empresa
-        return redirect()->route('empresa.index')->with('mensaje', 'Empresa eliminada');
+        return redirect()->route('Empresa.index')->with('mensaje', 'Empresa eliminada');
     }
 
 
@@ -43,7 +43,7 @@ class EmpresaController extends Controller
 
     public function show($id){
         $empresa = Empresa::findOrFail($id);
-        return view('empresas.show', compact('empresa'));
+        return view('Empresas.show', compact('empresa'));
     }
 
 

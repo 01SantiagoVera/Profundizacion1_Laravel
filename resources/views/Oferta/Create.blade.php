@@ -145,7 +145,7 @@
                 <button type="submit" class="btn btn-outline-success btn-lg shadow-sm me-2">
                     <i class="bi bi-save"></i> Guardar
                 </button>
-                <a href="{{ route('Oferta.index') }}" class="btn btn-outline-danger btn-lg shadow-sm">
+                <a href="{{ route('Oferta.listarOfertas') }}" class="btn btn-outline-danger btn-lg shadow-sm">
                     <i class="bi bi-x-lg"></i> Cancelar
                 </a>
             </div>

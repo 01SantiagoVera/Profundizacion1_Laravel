@@ -39,7 +39,7 @@
             </div>
 
             <div class="d-flex justify-content-start">
-                <a href="{{ route('empresa.index') }}" class="btn btn-outline-secondary btn-lg shadow-sm">
+                <a href="{{ route('Empresa.index') }}" class="btn btn-outline-secondary btn-lg shadow-sm">
                     <i class="bi bi-arrow-left-circle"></i> Volver
                 </a>
             </div>

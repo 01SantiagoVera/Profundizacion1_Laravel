@@ -1,6 +1,6 @@
-@extends('layout.app')
+@extends('layout.client')
 
-@section('title', $oferta->titulo)
+@section('title', 'Ofertas de Práctica')
 
 @section('content')
     <div class="col py-3">
@@ -61,10 +61,12 @@
 
             <!-- Botón de Regreso -->
             <div class="d-flex justify-content-start">
-                <a href="{{ route('Oferta.listarOfertas') }}" class="btn btn-outline-secondary btn-lg shadow-sm">
+                <a href="" class="btn btn-outline-secondary btn-lg shadow-sm">
                     <i class="bi bi-arrow-left-circle"></i> Volver
                 </a>
             </div>
         </div>
     </div>
 @endsection
+
+

@@ -9,17 +9,19 @@ use Illuminate\Routing\Controller as BaseController;
 
 class OfertaController extends BaseController
 {
-    public function index()
+    public function listarOfertas($vista)
     {
-        $ofertas = Oferta::with('empresa')->get();
-        return view('oferta.table', compact('ofertas'));
+        $ofertas = Oferta::with('empresa')->paginate(10);
+        return view($vista, compact('ofertas'));
     }
+
+
 
     public function create()
     {    // Obtener todas las empresas disponibles
         $empresas = \App\Models\Empresa::all();
 
-        return view('oferta.Create', compact('empresas'));
+        return view('Oferta.Create', compact('empresas'));
     }
 
     public function store(Request $request)
@@ -48,7 +50,7 @@ class OfertaController extends BaseController
             'habilidades' => $request->habilidades,
         ]);
 
-        return redirect()->route('Oferta.index')->with('success', 'Oferta creada exitosamente');
+        return redirect()->route('Oferta.listarOfertas')->with('success', 'Oferta creada exitosamente');
     }
 
     public function update(Request $request, $id)
@@ -79,14 +81,17 @@ class OfertaController extends BaseController
             'habilidades' => $request->habilidades,
         ]);
 
-        return redirect()->route('Oferta.index')->with('success', 'Oferta actualizada con éxito');
+        return redirect()->route('Oferta.listarOfertas')->with('success', 'Oferta actualizada con éxito');
     }
 
     public function show($id)
     {
         $oferta = Oferta::with('empresa')->findOrFail($id);
-        return view('oferta.show', compact('oferta'));
+        $vista = request()->get('vista', 'Oferta.Show'); // Obtiene la vista del request, con valor por defecto
+        return view($vista, compact('oferta'));
     }
+
+
 
     public function edit($id)
     {
@@ -101,6 +106,6 @@ class OfertaController extends BaseController
         $oferta = Oferta::findOrFail($id);
         $oferta->delete();
 
-        return redirect()->route('Oferta.index')->with('success', 'Oferta eliminada con éxito');
+        return redirect()->route('Oferta.listarOfertas')->with('success', 'Oferta eliminada con éxito');
     }
 }
