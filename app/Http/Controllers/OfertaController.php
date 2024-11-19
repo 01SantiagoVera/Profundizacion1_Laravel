@@ -87,9 +87,16 @@ class OfertaController extends BaseController
     public function show($id)
     {
         $oferta = Oferta::with('empresa')->findOrFail($id);
-        $vista = request()->get('vista', 'Oferta.Show'); // Obtiene la vista del request, con valor por defecto
+        $vista = request()->route('vista') ?? 'Oferta.Show'; // Asigna un valor predeterminado
+
+        if (!view()->exists($vista)) {
+            abort(404, "La vista '{$vista}' no existe.");
+        }
+
         return view($vista, compact('oferta'));
     }
+
+
 
 
 
@@ -108,4 +115,14 @@ class OfertaController extends BaseController
 
         return redirect()->route('Oferta.listarOfertas')->with('success', 'Oferta eliminada con éxito');
     }
+
+    public function mostrarPostulaciones($id)
+    {
+        // Obtener la oferta y las postulaciones relacionadas
+        $oferta = Oferta::with('postulaciones.estudiante')->findOrFail($id);
+
+        // Pasar las postulaciones y la oferta a la vista
+        return view('Estudiante.listarPostulaciones', compact('oferta'));
+    }
+
 }

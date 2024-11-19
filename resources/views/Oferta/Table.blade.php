@@ -45,7 +45,7 @@
                         <a href="{{ route('Oferta.edit', $oferta->id) }}" class="btn btn-sm btn-outline-success" title="Editar">
                             <i class="bi bi-pencil"></i>
                         </a>
-                        <a href="{{ route('Oferta.show', $oferta->id) }}" class="btn btn-sm btn-outline-primary" title="Ver">
+                        <a href="{{ route('admin.ofertas.show', $oferta->id) }}" class="btn btn-sm btn-outline-primary" title="Ver">
                             <i class="bi bi-eye"></i>
                         </a>
                         <form action="{{ route('Oferta.destroy', $oferta->id) }}" method="POST" style="display: inline;">

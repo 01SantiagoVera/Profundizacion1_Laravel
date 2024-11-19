@@ -22,4 +22,8 @@ class Estudiante extends Model
         'email',
         'habilidades'
     ];
+    public function postulaciones()
+    {
+        return $this->hasMany(Postulacion::class);
+    }
 }

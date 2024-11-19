@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\PostulacionController;
 use App\Http\Controllers\TutorAcademicoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpresaController;
@@ -20,6 +21,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('TutorAcademico', TutorAcademicoController::class);
     Route::resource('TutorEmpresarial', TutorEmpresarialController::class);
     Route::resource('Oferta', OfertaController::class);
+    Route::resource('Postulacion', PostulacionController::class);
 
     // Ruta para listar ofertas del administrador
     Route::get('ofertas', [OfertaController::class, 'listarOfertas'])
@@ -27,8 +29,8 @@ Route::group(['prefix' => 'admin'], function () {
         ->name('Oferta.listarOfertas');
 
     Route::get('ofertas/{id}', [OfertaController::class, 'show'])
-        ->defaults('vista', 'Oferta.Show')
         ->name('admin.ofertas.show');
+
 });
 
 // Rutas para el estudiante
@@ -40,4 +42,11 @@ Route::group(['prefix' => 'user'], function () {
     Route::get('ofertas/{id}', [OfertaController::class, 'show'])
         ->defaults('vista', 'Estudiante.ver')
         ->name('estudiante.ofertas.show');
+
+    Route::post('postularse/{id_oferta}', [PostulacionController::class, 'postularse'])
+        ->name('user.postulaciones.postularse');
+
 });
+
+
+

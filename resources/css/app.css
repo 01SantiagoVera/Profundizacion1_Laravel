@@ -1,0 +1,20 @@
+.custom-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.custom-title {
+    color: #4a90e2;
+}
+.custom-btn {
+    background-color: #4a90e2;
+    color: white;
+}
+.custom-btn:hover {
+    background-color: #357abd;
+    color: white;
+}
+.icon-highlight {
+    color: #4a90e2;
+    font-size: 1.2rem;
+}

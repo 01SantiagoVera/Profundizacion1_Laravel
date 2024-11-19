@@ -39,6 +39,12 @@
                     <span class="ms-1 d-none d-sm-inline text-white">Ofertas</span>
                 </a>
             </li>
+            <li>
+                <a href="{{ route('Postulacion.index') }}" class="nav-link px-0 align-middle text-white">
+                    <i class="fs-4 bi-person-add text-white"></i>
+                    <span class="ms-1 d-none d-sm-inline text-white">Postulaciones</span>
+                </a>
+            </li>
         </ul>
         <hr>
         <div class="dropdown pb-4">
